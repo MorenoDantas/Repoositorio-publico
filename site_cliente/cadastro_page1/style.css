@@ -1,0 +1,190 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin:0; 
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(45deg, #8A6DF2, #8e2de2, #4a00e0); /* gradiente cores de fundo */
+    background-repeat: no-repeat; /* para não repetir o fundo */
+    min-height: 100vh; /* altura em 100 viewport para height */
+    min-width: 100vw; /* largura em 100 viewport para width */
+    align-items: center; /* alinha os itens de cada linha, em cruz, dentro dos containeres */
+    justify-content: center;
+    font-family: 'Poppins', Helvetica, sans-serif;
+}
+
+#sec1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form {
+    background: white;
+    max-width: 500px;
+    min-height: 40vh;
+    padding: 15px; /* entendo como distância do conteúdo de uma margem do container */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* sombra da caixa */
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    }
+
+
+form h1{
+    /* font: 2rem 'poppins', sans-serif;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 30px; */
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+form h1::before { /* linha abaixo da palavra CADASTRO */
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 51px;
+    bottom: 3px;
+    left: 0;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #8e2de2, #4a00e0);
+}
+
+/* form p{
+    font: 1.2rem 'Roboto', sans-serif;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    line-height: 30px;
+} */
+
+
+/* label, fieldset, input, select {
+    font-family: 'poppins', Helvetica, sans-serif;
+} */
+
+/* input, select, textarea {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    box-sizing: border-box;
+    border: 1px solid rgb(80, 80, 80);
+    color: #777;
+} */
+
+.campo {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.campo .linha::before {
+    content: '';
+    position: absolute; /* posição absoluta em relação ao PAI que é relativo */
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgb(160, 160, 160);
+}
+
+.campo .linha::after {
+    content: '';
+    position: absolute; /* posição absoluta em relação ao PAI que é relativo */
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transform: scaleX(0); /* No eixo x a cor fica não visível */
+    transition: all 0.3s ease-in-out;
+    transform-origin: left;
+}
+
+.campo input:focus ~ .linha::after {
+    transform: scaleX(1);
+}
+
+.campo input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.596);
+}
+
+.campo input::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.opcoes {
+    border: 1px solid rgb(160, 160, 160);;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+legend {
+    margin-left: 5px;
+}
+
+select {
+    margin-left: 20px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+    margin-left: 20px;    
+}
+
+textarea {
+    height: 80px;
+    width: 100%;
+    outline: none;
+}
+
+.botoes-form {
+    display: flex;    
+}
+
+input[type="submit"], input[type="reset"] {
+    /* margin: 5px;
+    cursor: pointer; */
+    padding: 00.4rem;
+    border-radius: 4px;
+    border: 0;
+    font-size: 0.85rem;
+    color: white;
+    background-color: rgb(97, 212, 93);
+    width: 100%;
+    cursor: pointer;
+    margin: 20px; 
+}
+
+input[type="reset"] {
+    background-color: rgb(212, 69, 69);
+}
+
+.copyright {
+    width: 100%;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin-bottom: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(0, 0, 0, 0.18);
+    color: #979699;
+    text-align: center;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando Formulário</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <section id="sec1">
+            <form name="cadastro" action="" method=""> 
+                <h1>Cadastro</h1>
+                <!-- <p>Preencha os campos corretamente!</p> -->
+                <div class="campo">
+                    <label for="fname">Nome:</label>
+                    <input type="text" id="fname" name="fname" placeholder="Digite seu nome completo" required minlength="3" maxlength="50">
+                    <div class="linha"></div>
+                </div><!-- dentro de qualquer input é possível incluir o atributo "AUTOFOCUS" que ao atualizar a página o cursor volta para o campo com autofocus indicado-->
+                <!-- <label for="lname">Sobrenome</label>
+                <input type="text" id="lname" name="lname" placeholder="último nome" required minlength="3" maxlength="28" size="30"><br> -->
+
+                <div class="campo">
+                    <label for="birth">Data de nascimento:</label>
+                    <input type="date" id="birth" name="birth" placeholder="Data de nascimento">
+                    <div class="linha"></div>
+                </div>
+                
+                <div class="campo">
+                    <label for="celular">WhatsApp:</label>
+                    <input type="tel" id="celular" name="celular" size="80" placeholder="(99) 99999-9999" pattern="^\(?\d{2}\)\d{5}[-\s]\d{4}.*?$">
+                    <div class="linha"></div>
+                </div>
+
+                <fieldset class="opcoes"> <!-- o fieldset serve para agrupar os elementos como as labels ou elementos de controle -->
+                    <legend>Gênero:</legend>
+                    <input type="radio" id="masc" name="genero" value="masc">
+                    <label for="masc">Masculino</label><br>
+                    <input type="radio" id="fem" name="genero" value="fem">
+                    <label for="fem">Feminino</label><br>
+                    <input type="radio" id="outro" name="genero" value="outro">
+                    <label for="outro">Outro</label>
+                </fieldset>
+                
+                <fieldset class="opcoes">
+                    <legend>Descobriu o site por:</legend>
+                    <input type="checkbox" name="instagram">Instagram <br>
+                    <input type="checkbox" name="facebook">Facebook <br>
+                    <input type="checkbox" name="friend">Amigo(a)<br>
+                    <input type="checkbox" name="outro">Outro
+                </fieldset>
+
+                <fieldset class="opcoes">
+                    <legend>Estado civil</legend>
+                    <select name="estadoCivil" id="estadoCivil"> <!-- caso não seja um menu, mas sim uma lista de opções visíveis, devemos inserir o atributo size="" com a quantidade de opções-->
+                        <option value="">-- Selecionar --</option>
+                        <option value="solt">Solteiro(a)</option>
+                        <option value="cas">Casado(a)</option>
+                        <option value="uni">União Estável</option>
+                        <option value="divor">Divorciado(a)</option>
+                        <option value="viu">Viúvo(a)</option>
+                    </select>
+                </fieldset>
+
+                <div class="campo">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" value="">
+                    <div class="linha"></div>
+                </div>
+
+                <div class="campo">
+                    <label for="mensagem">Mensagem:</label><br>
+                    <textarea name="mensagem" id="mensagem" cols="51" rows="8"></textarea>
+                </div>
+
+                <div class="campo">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" value="">
+                    <div class="linha"></div>
+                </div>
+
+                <input type="hidden" name="cpf" value="verdadeiro"> <!-- para valores ocultos a serem confirmados -->
+                <div class="botoes-form"> <!-- no caso esta DIV só está sendo usada para colocar os botões LADO A LADO na exibição-->
+                    <input type="submit" name="cadastrar" value="Concluir">
+                    <input type="reset" name="cancelar" value="Cancelar" >
+                </div>
+                <!--
+                    TIPOS:
+                    - text = cria um campo de texto em uma linha
+                    - password = cria um campo texto sem exibir o que está sendo digitado
+                    - button = cria um botão para ser precionado. Deve ter o nome do botão
+                    - submit = cria um botão enviar
+                    - date = cria um campo para data
+                    - radio = cria um botão de escolha única
+                    - checkbox = cria caixa de seleção
+                    - hidden = cria controle oculto
+                    - PARA MAIS OPÇÕES https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-type
+                -->
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p class="copyright">Desenvolvido por Moreno Dantas © 2021 </p>
+    </footer>
+</body>
+</html>
