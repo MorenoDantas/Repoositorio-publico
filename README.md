@@ -1,2 +1,2 @@
-# Repoositorio-publico
+# Repoositório Público
  Minhas práticas e projetos compartilhados.
